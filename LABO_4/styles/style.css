@@ -20,4 +20,9 @@ h1 {
   background-repeat: no-repeat;
 }
 
+/*wide border */
+.wide-border {
+  border-width:9px; 
+}
+
 
