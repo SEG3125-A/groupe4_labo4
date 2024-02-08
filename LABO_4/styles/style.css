@@ -6,7 +6,18 @@
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {
   font-family: "Times New Roman", Times, serif;
-  text-shadow: 3px 3px 1px black;
+  text-shadow: 4px 5px 3px black;
   
 }
+
+
+
+/*image background for the welcome page*/
+.bg-image {
+  background-image: url("../images/couples-long-vacation-plans-go-camping-bike-ride-through-forest-appreciate-nature-flat-vector-illustration-design_1150-56755.avif");
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
