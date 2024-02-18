@@ -23,6 +23,32 @@
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 
+    <!--payment methode and tooltip-->
+    <title>tooltip</title> <!--tooltip learned from w3school-->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--for the date picker-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Datepicker - Dates in other months</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker({
+        showOtherMonths: true,
+        selectOtherMonths: true
+      });
+    } );
+    </script>
+
     
 
 </head>
@@ -166,7 +192,7 @@
       
       <div id="form" class="container-md p-3 my-3 border border-success text-success">
 
-        <head><title>Appointment Form</title>
+        <title>Appointment Form</title>
         
         <h2>Appointment Form <ion-icon name="calendar-outline"></ion-icon></h2>
         
@@ -174,19 +200,16 @@
         
         
 
-        </head>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <body>
+        
 
-            <div>
+          
                 <br>
-            </div>
+            
             <div>
                 <br>
             </div>
 
-            <div class="surveyform">
+            
             <div class="form-group">
                 
     
@@ -289,31 +312,39 @@
                   </div>
 
             </div>
-        <div>
-            <br>
-        </div> 
+      
+        
+       
+        <br>
+
+        <!--Date picker-->
+         
+            <div>
+                <p>Date: <input type="text" id="datepicker"></p>
+            </div>
+         
+        
+         
+         
+      
+
+         
+       
+        
+         
 
        
-<br>
-
+        <br>
         <!--payment-->
-        <head>
-            <title>tooltip</title> <!--tooltip learned from w3school-->
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-            <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-                    </head>
-        <body>
+        
         <div class="container-md p-3 my-3 border border-success">
             <div>
             <label><h4>payment method<ion-icon name="card-outline"></ion-icon></h4></label><br><br>    
         </div>
-          <label><h5>are you paying with debit or credit</h5></label>
+        <div>
+            <label><h5>Are you paying with debit or credit</h5></label>
             
-        <form class="form-inline" action="/action_page.php">
+            <form class="form-inline" action="/action_page.php">
             
             
             <label class="form-check-label">
@@ -323,10 +354,15 @@
                 <input type="radio" class="form-check-input" name="optradio">Debit
               </label>
           </form>
+        </div>
+          
           <br>
 
-          <label><h5>Enter your card information</h5></label>
-          <form>
+
+          <!--card info -->
+        <div>
+            <label><h5>Enter your card information</h5></label>
+          
             <div class="row">
               <div class="col">
                 <input type="text" class="form-control" id="card number" placeholder="Enter card number" name="cardNumber">
@@ -336,14 +372,10 @@
                 <input id="EnterCCV" type="CCV" class="form-control" placeholder="Enter CCV" name="CCV">
                 <a href="#" data-toggle="tooltip" title="the CVV is the 3 digit code behind your card" >CVV</a>
               </div>
-
+              
             </div>
-            
-            
-          </form>
-
           <br><br>
-          <form>
+          
             <div class="row">
               <div class="col">
                 <input type="text" class="form-control" id="ExpDate" placeholder="Enter card expiration date" name="ExpDate">
@@ -352,9 +384,25 @@
                 <input type="card holder name" class="form-control" placeholder="Enter card holder name" name="CHName">
               </div>
             </div>
-          </form>
+
         </div>
-        
+            
+            
+          
+
+          
+          
+        </div>
+    
+
+        <!--submit button-->
+        <br><br>
+
+        <div class="justify-content-center align-items-center">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+     
+        <br>
           
         </body>
         
@@ -365,21 +413,10 @@
         
 
 
-        <!--submit button-->
-        <br><br>
-
-        <div class="justify-content-center align-items-center">
-            <button type="submit" class="btn btn-success">Submit</button>
-        </div>
-     </div>
-        <br><br>
-
-      
-        </div>
-       
-
         
-    </body>
+        
+
+    
 
 
  
