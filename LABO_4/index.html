@@ -293,33 +293,22 @@
             <br>
         </div> 
 
-        <!--datepicker-->
-        <label><h4>shoose a date and time to book an appointment with us </h4></label>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Datepicker - Restrict date range</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker({ minDate: -0, maxDate: "+1M +10D" });
-  } );
-  </script>
-</head>
-<body>
- 
-<p>Date: <input type="text" id="datepicker"></p>
- 
- 
-</body>
+       
 <br>
 
         <!--payment-->
-        <div class="container-md p-3 my-3 border border-success"> 
-        <div>
+        <head>
+            <title>tooltip</title> <!--tooltip learned from w3school-->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+                    </head>
+        <body>
+        <div class="container-md p-3 my-3 border border-success">
+            <div>
             <label><h4>payment method<ion-icon name="card-outline"></ion-icon></h4></label><br><br>    
         </div>
           <label><h5>are you paying with debit or credit</h5></label>
@@ -345,10 +334,11 @@
 
               <div class="col">
                 <input id="EnterCCV" type="CCV" class="form-control" placeholder="Enter CCV" name="CCV">
+                <a href="#" data-toggle="tooltip" title="the CVV is the 3 digit code behind your card" >CVV</a>
               </div>
 
             </div>
-            <!--tooltip-->
+            
             
           </form>
 
@@ -356,45 +346,40 @@
           <form>
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" id="email" placeholder="Enter card expiration date" name="ExpDate">
+                <input type="text" class="form-control" id="ExpDate" placeholder="Enter card expiration date" name="ExpDate">
               </div>
               <div class="col">
                 <input type="card holder name" class="form-control" placeholder="Enter card holder name" name="CHName">
               </div>
             </div>
           </form>
+        </div>
+        
+          
+        </body>
+        
+       
+        
 
         
         
 
 
+        <!--submit button-->
+        <br><br>
 
-        
+        <div class="justify-content-center align-items-center">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
      </div>
         <br><br>
 
-
-    <div class="justify-content-center align-items-center">
-        <button type="submit" class="btn btn-success">Submit</button>
-    </div>  
+      
         </div>
        
-        
-        
-        
-        
-    </form>
-        
-    </div>
-    
+
         
     </body>
-</div>
 
-  <body>
-   
 
  
-   
-   
-  </body>
