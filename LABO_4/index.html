@@ -219,6 +219,7 @@
                 
                 <input class="form-control" type="text" id="userName" placeholder="Enter your first name...">
                 
+                
             </div>
             <div>
                 <br>
@@ -236,29 +237,33 @@
             </div>
                 
             <div class="form-group">
-                
-                <label for="userName"><h5>Email Address:</h5></label><br>
-                
-                <input class="form-control" type="text" id="userEmail" placeholder="Enter your email...">
-                
+
+                <label for="userEmail"><h5>Email Address:</h5></label><br>
+
+                <input class="form-control" type="email" id="userEmail" placeholder="Enter your email...">
+
+                <div class="invalid-feedback" style="display: none;" id="emailError">Please enter a valid email address.</div>
+
             </div>
 
             <div>
                 <br>
             </div>
                 
-                <div class="form-group">
-                
-                <label for="userName"> <h5>Phone Number:</h5></label><br>
-                
+            <div class="form-group">
+
+                <label for="userNumber"><h5>Phone Number:</h5></label><br>
+
                 <input class="form-control" type="text" id="userNumber" placeholder="Enter your mobile number...">
+
+                <div class="invalid-feedback" style="display: none;" id="phoneError">Invalid phone number.</div>
+
+            </div>
+
+            <div>
+                <br>
+            </div>
                 
-                </div>
-
-                <div>
-                    <br>
-                </div>
-
                 <!--what service -->
                 <div class="form-group">
         
@@ -404,6 +409,31 @@
         </div>
      
         <br>
+        <script>
+          $(document).ready(function() {
+              var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+              var phoneRegex = /^[0-9]{10}$/;
+          
+              // Validating email
+              $('#userEmail').on('input', function() {
+                  if(!emailRegex.test(this.value)) {
+                      $('#emailError').show();
+                  } else {
+                      $('#emailError').hide();
+                  }
+              });
+          
+              // Validating number
+              $('#userNumber').on('input', function() {
+                  if(!phoneRegex.test(this.value)) {
+                      $('#phoneError').show();
+                  } else {
+                      $('#phoneError').hide();
+                  }
+              });
+          });
+          </script>
+          
           
         </body>
         
